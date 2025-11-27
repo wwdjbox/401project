@@ -1,0 +1,250 @@
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0f172a;
+  background-color: #f5f6fb;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem clamp(1rem, 4vw, 4rem) 4rem;
+  gap: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #0f172a;
+}
+
+.lede {
+  max-width: 480px;
+  color: #475569;
+}
+
+.summary-card {
+  background: #0f172a;
+  color: #fff;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.summary-card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.summary-card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.summary-card dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+}
+
+.summary-card dd {
+  margin: 0.15rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.projection {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.projection-value {
+  font-size: 1.5rem;
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0px 12px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-secondary {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.toggle-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.5rem;
+}
+
+.toggle {
+  border: 1px solid #cbd5f5;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle.active {
+  background: #1d4ed8;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+  width: 160px;
+}
+
+.prefix {
+  position: absolute;
+  left: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+#contribution-slider {
+  width: 100%;
+  accent-color: #2563eb;
+}
+
+.helper {
+  color: #475569;
+  margin: 0.25rem 0;
+}
+
+.primary {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.primary:not(:disabled):hover {
+  background: #1d4ed8;
+}
+
+.status {
+  min-height: 1.25rem;
+  margin: 0;
+  color: #047857;
+  font-weight: 500;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.impact-grid .label {
+  color: #475569;
+  margin: 0;
+}
+
+.impact-grid .value {
+  font-size: 1.5rem;
+  margin: 0.2rem 0 0;
+  font-weight: 600;
+}
+
+.impact-grid .emphasize {
+  color: #0f172a;
+  font-size: 1.75rem;
+}
+
+footer {
+  margin-top: auto;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+  .input-wrapper input {
+    width: 100%;
+  }
+}
+
