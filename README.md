@@ -1,0 +1,1 @@
+Please go into the folder and run "python3 server.py." Then, open http://127.0.0.1:8000
